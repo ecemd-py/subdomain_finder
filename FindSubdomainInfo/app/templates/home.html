@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domain Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Domain Subdomain Checker</h1>
+    <form action="/get_info" method="get">
+        <label for="domain">Enter a domain:</label>
+        <input type="text" name="domain" required>
+        <button type="submit">Send</button>
+    </form>
+    
+    <form action="/show_db" method="get" style="display:center;">
+        <button type="submit" class="button">Show All Data</button>
+    </form>
+</body>
+</html>

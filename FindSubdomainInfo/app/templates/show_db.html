@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Contents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Database Content</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>DOMAIN</th>
+                <th>SUBDOMAIN</th>
+                <th>WHOIS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row.domain }}</td>
+                    <td>{{ row.subdomain_list }}</td>
+                    <td>{{ row.whois }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Return to Homepage</a>
+</body>
+</html>
